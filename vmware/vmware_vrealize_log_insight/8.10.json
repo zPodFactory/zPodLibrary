@@ -1,0 +1,13 @@
+{
+    "component_name": "vrli",
+    "component_version": "8.10",
+    "component_type": "vrli",
+    "component_description": "VMware vRealize Log Insight",
+    "component_url": "https://www.vmware.com/fr/products/aria-operations-for-logs.html",
+    "component_download_engine": "customerconnect",
+    "component_download_category": "vmware_vrealize_log_insight/8_10",
+    "component_download_group": "VRLI-8100",
+    "component_download_file": "VMware-vRealize-Log-Insight-8.10.0.0-20623770_OVF10.ova",
+    "component_download_file_checksum": "sha256:c6c7abf4b81e78e0570e187cb96e7960ee16e4db7be901d2026c57e19183a3b5",
+    "component_download_file_size": "1.45 GB"
+}

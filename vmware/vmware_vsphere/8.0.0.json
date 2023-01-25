@@ -1,0 +1,13 @@
+{
+    "component_name": "vcsa",
+    "component_version": "8.0.0",
+    "component_type": "vcsa",
+    "component_description": "VMware vCenter Server",
+    "component_url": "https://www.vmware.com/products/vcenter.html",
+    "component_download_engine": "customerconnect",
+    "component_download_category": "vmware_vsphere/8_0",
+    "component_download_group": "VC800",
+    "component_download_file": "VMware-VCSA-all-8.0.0-20519528.iso",
+    "component_download_file_checksum": "sha256:6f9a0691ee649f4e59fd961790d42367cad9bbbc0652070e893e209c95d969c5",
+    "component_download_file_size": "7.94 GB"
+}

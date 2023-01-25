@@ -1,0 +1,13 @@
+{
+    "component_name": "vcd",
+    "component_version": "10.3.3.2",
+    "component_type": "vcd",
+    "component_description": "VMware Cloud Director",
+    "component_url": "https://www.vmware.com/products/vcloud-director.html",
+    "component_download_engine": "customerconnect",
+    "component_download_category": "vmware_cloud_director/10_3",
+    "component_download_group": "VSPP_VCD10332",
+    "component_download_file": "VMware_Cloud_Director-10.3.3.8153-20030439_OVF10.ova",
+    "component_download_file_checksum": "sha256:7f2d78db8c3c174164bfc3710e9c7ffe7561336850f8eef1f9d5f631cfa45585",
+    "component_download_file_size": "1.32 GB"
+}

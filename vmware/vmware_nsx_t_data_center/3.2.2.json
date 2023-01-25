@@ -1,0 +1,13 @@
+{
+    "component_name": "nsxt",
+    "component_version": "3.2.2",
+    "component_type": "nsxt",
+    "component_description": "VMware NSX-T Datacenter for vSphere",
+    "component_url": "https://www.vmware.com/products/nsx.html",
+    "component_download_engine": "customerconnect",
+    "component_download_category": "vmware_nsx_t_data_center/3_x",
+    "component_download_group": "NSX-T-322",
+    "component_download_file": "nsx-unified-appliance-3.2.2.0.0.20737190.ova",
+    "component_download_file_checksum": "sha256:b37e981ad23411af5f306928e537b2a05b111c6a86e20463ac6169336068ea0d",
+    "component_download_file_size": "10.14 GB"
+}
