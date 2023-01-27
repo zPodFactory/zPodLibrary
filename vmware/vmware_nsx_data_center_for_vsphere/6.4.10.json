@@ -5,9 +5,11 @@
     "component_description": "VMware NSX for vSphere (NSX-v)",
     "component_url": "https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/index.html",
     "component_download_engine": "customerconnect",
-    "component_download_category": "vmware_nsx_data_center_for_vsphere/6_x",
-    "component_download_group": "NSXV_6410",
+    "component_download_product": "vmware_nsx_data_center_for_vsphere",
+    "component_download_subproduct": "nsxv",
+    "component_download_version": "6.4.10",
     "component_download_file": "VMware-NSX-Manager-6.4.10-17626462.ova",
     "component_download_file_checksum": "sha256:d7ec939491da487942e0f11ef0812ada3ca1723dd56a366a6d0b4be35d5ce565",
-    "component_download_file_size": "2.27 GB"
+    "component_download_file_size": "2.27 GB",
+    "component_isnested": true
 }

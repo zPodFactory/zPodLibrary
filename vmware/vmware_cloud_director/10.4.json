@@ -5,9 +5,11 @@
     "component_description": "VMware Cloud Director",
     "component_url": "https://www.vmware.com/products/vcloud-director.html",
     "component_download_engine": "customerconnect",
-    "component_download_category": "vmware_cloud_director/10_4",
-    "component_download_group": "VSPP_VCD104",
+    "component_download_product": "vmware_cloud_director",
+    "component_download_subproduct": "vspp_vcd",
+    "component_download_version": "10.4",
     "component_download_file": "VMware_Cloud_Director-10.4.0.8214-20079248_OVF10.ova",
     "component_download_file_checksum": "sha256:741c67176aed7a70274c2d0b3107593393082ace1142efbd92228a8c9234a33f",
-    "component_download_file_size": "1.42 GB"
+    "component_download_file_size": "1.42 GB",
+    "component_isnested": true
 }

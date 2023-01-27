@@ -1,13 +1,15 @@
 {
     "component_name": "vrops",
-    "component_version": "8.6.4",
+    "component_version": "8.6.3",
     "component_type": "vrops",
     "component_description": "VMware vRealize Operations",
     "component_url": "https://www.vmware.com/fr/products/aria-operations-for-logs.html",
     "component_download_engine": "customerconnect",
-    "component_download_category": "vmware_vrealize_operations/8_6",
-    "component_download_group": "VROPS-863",
+    "component_download_product": "vmware_vrealize_operations",
+    "component_download_subproduct": "vrops",
+    "component_download_version": "8.6.3",
     "component_download_file": "vRealize-Operations-Manager-Appliance-8.6.3.19682901_OVF10.ova",
     "component_download_file_checksum": "sha256:34708220fb76cf9aee52c10461a578a7bff2dd2357215eab8b83a8a624cee20e",
-    "component_download_file_size": "2.66 GB"
+    "component_download_file_size": "2.66 GB",
+    "component_isnested": true
 }
