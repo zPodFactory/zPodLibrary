@@ -1,0 +1,11 @@
+{
+    "component_name": "vyos",
+    "component_version": "1.2.9",
+    "component_type": "vyos",
+    "component_description": "VyOS Router VM",
+    "component_url": "https://vyos.net/",
+    "component_download_engine": "https",
+    "component_download_file": "http://s3-us.vyos.io/1.2.9/vyos-1.2.9-cloud-init-vmware.ova",
+    "component_download_file_size": "486 MB",
+    "component_isnested": true
+}
