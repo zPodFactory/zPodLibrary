@@ -2,11 +2,11 @@
     "component_name": "zbox",
     "component_version": "11.6",
     "component_type": "zbox",
-    "component_description": "zBox Utility VM",
+    "component_description": "zBox Utility VM with core services (DNS, DHCP, NTP, NFS, etc.)",
     "component_url": "https://github.com/zPodFactory",
     "component_download_engine": "https",
-    "component_download_file": "https://cloud.tsugliani.fr/ova/zbox-11.6.ova",
-    "component_download_file_checksum": "sha256:e3b4a376942129a531e147e4ab32889d74400d5eb11e784e27d068f501dd7d1f",
+    "component_download_file": "https://cloud.tsugliani.fr/ova/zbox-core-services-11.6.ova",
+    "component_download_file_checksum": "sha256:19b8f462993614f543f8568d59e9636f3be478abbc15c056477b86c930a4dcbc",
     "component_download_file_size": "613 MB",
     "component_isnested": false
 }
