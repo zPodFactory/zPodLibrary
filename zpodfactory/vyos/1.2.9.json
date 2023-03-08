@@ -6,6 +6,7 @@
     "component_url": "https://vyos.net/",
     "component_download_engine": "https",
     "component_download_file": "http://s3-us.vyos.io/1.2.9/vyos-1.2.9-cloud-init-vmware.ova",
+    "component_download_file_checksum": "sha256:67a793fbcbf046e7c5b2a9f2ecb80c68c1805736a8fc6342721d2ed1f6ea71d6",
     "component_download_file_size": "486 MB",
     "component_isnested": true
 }
