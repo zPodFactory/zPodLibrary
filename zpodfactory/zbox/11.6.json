@@ -8,5 +8,55 @@
     "component_download_file": "https://cloud.tsugliani.fr/ova/zbox-core-services-11.6.ova",
     "component_download_file_checksum": "sha256:19b8f462993614f543f8568d59e9636f3be478abbc15c056477b86c930a4dcbc",
     "component_download_file_size": "585 MB",
+    "component_deploy_govc_spec": {
+        "DiskProvisioning": "flat",
+        "IPAllocationPolicy": "dhcpPolicy",
+        "IPProtocol": "IPv4",
+        "PropertyMapping": [
+            {
+                "Key": "guestinfo.hostname",
+                "Value": "{{zpod_hostname}}"
+            },
+            {
+                "Key": "guestinfo.ipaddress",
+                "Value": "{{zpod_ipaddress}}"
+            },
+            {
+                "Key": "guestinfo.netprefix",
+                "Value": "{{zpod_netprefix}}"
+            },
+            {
+                "Key": "guestinfo.gateway",
+                "Value": "{{zpod_gateway}}"
+            },
+            {
+                "Key": "guestinfo.dns",
+                "Value": "{{zpod_dns}}"
+            },
+            {
+                "Key": "guestinfo.domain",
+                "Value": "{{zpod_domain}}"
+            },
+            {
+                "Key": "guestinfo.password",
+                "Value": "{{zpod_password}}"
+            },
+            {
+                "Key": "guestinfo.sshkey",
+                "Value": "{{zpod_sshkey}}"
+            }
+        ],
+        "NetworkMapping": [
+            {
+                "Name": "VM Network",
+                "Network": "{{zpod_portgroup}}"
+            }
+        ],
+        "MarkAsTemplate": false,
+        "PowerOn": true,
+        "InjectOvfEnv": true,
+        "WaitForIP": true,
+        "Name": null
+    },
     "component_isnested": false
 }
