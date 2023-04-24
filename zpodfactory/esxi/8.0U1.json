@@ -1,0 +1,12 @@
+{
+    "component_name": "esxi",
+    "component_version": "8.0U1",
+    "component_type": "esxi",
+    "component_description": "VMware ESXi Template",
+    "component_url": "https://vmwa.re/nestedesxi",
+    "component_download_engine": "https",
+    "component_download_file": "https://download3.vmware.com/software/vmw-tools/nested-esxi/Nested_ESXi8.0u1_Appliance_Template_v1.ova",
+    "component_download_file_checksum": "sha256:84e3c2a8b3a5cc5949038ad64dbba152f71cc34b649677ad9894b9eefdd6b9b3",
+    "component_download_file_size": "827 MB",
+    "component_isnested": false
+}
