@@ -56,7 +56,7 @@
           },
           {
             "Key": "guestinfo.ssh_key",
-            "Value": ""
+            "Value": "{{zpod_sshkey}}"
           },
           {
             "Key": "guestinfo.ssh",
