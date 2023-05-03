@@ -1,6 +1,6 @@
 {
     "component_name": "esxi",
-    "component_version": "8.0U1",
+    "component_version": "8.0u1",
     "component_type": "esxi",
     "component_description": "VMware ESXi Template",
     "component_url": "https://vmwa.re/nestedesxi",
