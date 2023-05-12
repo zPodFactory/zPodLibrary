@@ -53,9 +53,9 @@
             }
         ],
         "MarkAsTemplate": false,
-        "PowerOn": true,
+        "PowerOn": false,
         "InjectOvfEnv": true,
-        "WaitForIP": true,
+        "WaitForIP": false,
         "Name": null
     },
     "component_isnested": false

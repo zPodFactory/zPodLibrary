@@ -79,9 +79,9 @@
         ],
         "Annotation": "Nested ESXi 8.0.1 Appliance (Build 21495797) www.williamlam.com",
         "MarkAsTemplate": false,
-        "PowerOn": true,
+        "PowerOn": false,
         "InjectOvfEnv": true,
-        "WaitForIP": true,
+        "WaitForIP": false,
         "Name": null
     },
     "component_isnested": false
