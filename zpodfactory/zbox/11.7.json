@@ -6,8 +6,8 @@
     "component_url": "https://github.com/zPodFactory",
     "component_download_engine": "https",
     "component_download_file": "https://cloud.tsugliani.fr/ova/zbox-core-services-11.7.ova",
-    "component_download_file_checksum": "sha256:368bbef6e71565d76ee687f5b861b78b6a2ef09572f3e0fd5f7fa3a502b4fb88",
-    "component_download_file_size": "470 MB",
+    "component_download_file_checksum": "sha256:d0b3a4b420136b7d5e3c0607579eab8845caac50d1aee461e96658eb20c487f2",
+    "component_download_file_size": "468 MB",
     "component_deploy_govc_spec": {
         "DiskProvisioning": "flat",
         "IPAllocationPolicy": "dhcpPolicy",
