@@ -9,7 +9,7 @@
     "component_download_file_checksum": "sha256:d0b3a4b420136b7d5e3c0607579eab8845caac50d1aee461e96658eb20c487f2",
     "component_download_file_size": "468 MB",
     "component_deploy_govc_spec": {
-        "DiskProvisioning": "flat",
+        "DiskProvisioning": "thin",
         "IPAllocationPolicy": "dhcpPolicy",
         "IPProtocol": "IPv4",
         "PropertyMapping": [
