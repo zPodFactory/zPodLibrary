@@ -1,0 +1,14 @@
+{
+    "component_name": "nsx",
+    "component_version": "4.1.0.2",
+    "component_description": "VMware NSX",
+    "component_url": "https://www.vmware.com/products/nsx.html",
+    "component_download_engine": "customerconnect",
+    "component_download_product": "vmware_nsx",
+    "component_download_subproduct": "nsx",
+    "component_download_version": "4.1.0.2",
+    "component_download_file": "nsx-unified-appliance-4.1.0.2.0.21761695.ova",
+    "component_download_file_checksum": "sha256:be2bb9349e59bfbccfc65f21c4059a14708b46393da68635a74803ab7dd01b99",
+    "component_download_file_size": "13.48 GB",
+    "component_isnested": true
+}
