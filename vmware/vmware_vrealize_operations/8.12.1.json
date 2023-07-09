@@ -11,5 +11,61 @@
     "component_download_file": "vRealize-Operations-Manager-Appliance-8.12.1.21952151_OVF10.ova",
     "component_download_file_checksum": "sha256:7f0c13ef8165720c92d1c3ca1ff550b500b3243167507ddac3649c8de69fc407",
     "component_download_file_size": "3.12 GB",
+    "component_deploy_govc_spec": {
+        "Deployment": "small",
+        "DiskProvisioning": "thin",
+        "IPAllocationPolicy": "dhcpPolicy",
+        "IPProtocol": "IPv4",
+        "PropertyMapping": [
+            {
+                "Key": "vamitimezone",
+                "Value": "Etc/UTC"
+            },
+            {
+                "Key": "forceIpv6",
+                "Value": "False"
+            },
+            {
+                "Key": "enableFIPS",
+                "Value": "False"
+            },
+            {
+                "Key": "vami.gateway.vRealize_Operations_Appliance",
+                "Value": "{{zpod_gateway}}"
+            },
+            {
+                "Key": "vami.domain.vRealize_Operations_Appliance",
+                "Value": "{{zpod_domain}}"
+            },
+            {
+                "Key": "vami.searchpath.vRealize_Operations_Appliance",
+                "Value": "{{zpod_domain}}"
+            },
+            {
+                "Key": "vami.DNS.vRealize_Operations_Appliance",
+                "Value": "{{zpod_dns}}"
+            },
+            {
+                "Key": "vami.ip0.vRealize_Operations_Appliance",
+                "Value": "{{zpod_ipaddress}}"
+            },
+            {
+                "Key": "vami.netmask0.vRealize_Operations_Appliance",
+                "Value": "{{zpod_netmask}}"
+            }
+        ],
+        "NetworkMapping": [
+            {
+                "Name": "Network 1",
+                "Network": "{{zpod_portgroup}}"
+            }
+        ],
+        "Annotation": "VMware Aria Operations Version 8.12.1 running on Photon OS",
+        "MarkAsTemplate": false,
+        "PowerOn": false,
+        "InjectOvfEnv": true,
+        "WaitForIP": false,
+        "Name": null
+    },
     "component_isnested": true
 }
