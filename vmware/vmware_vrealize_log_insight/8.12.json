@@ -11,5 +11,69 @@
     "component_download_file": "VMware-vRealize-Log-Insight-8.12.0.0-21618456_OVF10.ova",
     "component_download_file_checksum": "sha256:1f13587679705be7e22e01e57163d8a3cf4980b3869e90228e91076291d4d0a9",
     "component_download_file_size": "1.49 GB",
+    "component_deploy_govc_spec": {
+        "Deployment": "small",
+        "DiskProvisioning": "thin",
+        "IPAllocationPolicy": "dhcpPolicy",
+        "IPProtocol": "IPv4",
+        "PropertyMapping": [
+            {
+                "Key": "preferipv6",
+                "Value": "False"
+            },
+            {
+                "Key": "rootpw",
+                "Value": "{{zpod_password}}"
+            },
+            {
+                "Key": "hostname",
+                "Value": "{{zpod_hostname}}"
+            },
+            {
+                "Key": "sshkey",
+                "Value": "{{zpod_sshkey}}"
+            },
+            {
+                "Key": "fips",
+                "Value": "False"
+            },
+            {
+                "Key": "vami.gateway.VMware_vCenter_Log_Insight",
+                "Value": "{{zpod_gateway}}"
+            },
+            {
+                "Key": "vami.domain.VMware_vCenter_Log_Insight",
+                "Value": "{{zpod_domain}}"
+            },
+            {
+                "Key": "vami.searchpath.VMware_vCenter_Log_Insight",
+                "Value": "{{zpod_domain}}"
+            },
+            {
+                "Key": "vami.DNS.VMware_vCenter_Log_Insight",
+                "Value": "{{zpod_dns}}"
+            },
+            {
+                "Key": "vami.ip0.VMware_vCenter_Log_Insight",
+                "Value": "{{zpod_ipaddress}}"
+            },
+            {
+                "Key": "vami.netmask0.VMware_vCenter_Log_Insight",
+                "Value": "{{zpod_netmask}}"
+            }
+        ],
+        "NetworkMapping": [
+            {
+                "Name": "Network 1",
+                "Network": "{{zpod_portgroup}}"
+            }
+        ],
+        "Annotation": "VMware Aria Operations for Logs",
+        "MarkAsTemplate": false,
+        "PowerOn": false,
+        "InjectOvfEnv": true,
+        "WaitForIP": false,
+        "Name": null
+    },
     "component_isnested": true
 }
