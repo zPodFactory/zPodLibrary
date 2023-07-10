@@ -9,7 +9,7 @@
     "component_download_subproduct": "oplogs",
     "component_download_version": "8.12",
     "component_download_file": "VMware-vRealize-Log-Insight-8.12.0.0-21696970_OVF10.ova",
-    "component_download_file_checksum": "sha256:1e9a99a435d57ae6fc609b0f17b06796d96269d4ea656ab89c1eff1b74434e56",
+    "component_download_file_checksum": "sha256:660d48aee128d8c2735d59aa91740d53b46697c923480472410ac65e53b87e49",
     "component_download_file_size": "1.52 GB",
     "component_deploy_govc_spec": {
         "Deployment": "small",
