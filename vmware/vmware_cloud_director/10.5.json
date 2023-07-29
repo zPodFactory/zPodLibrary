@@ -1,0 +1,95 @@
+{
+    "component_name": "vcd",
+    "component_version": "10.5",
+    "component_type": "vcd",
+    "component_description": "VMware Cloud Director",
+    "component_url": "https://www.vmware.com/products/vcloud-director.html",
+    "component_download_engine": "customerconnect",
+    "component_download_product": "vmware_cloud_director",
+    "component_download_subproduct": "vspp_vcd",
+    "component_download_version": "10.5",
+    "component_download_file": "VMware_Cloud_Director-10.5.0.9946-22080476_OVF10.ova",
+    "component_download_file_checksum": "sha256:01b9a282379e173a9a528ab6d729bd175c249ebe3c78a246ae06cc0497f4aea1",
+    "component_download_file_size": "2 GB",
+    "component_deploy_govc_spec": {
+        "Deployment": "primary-small",
+        "DiskProvisioning": "thin",
+        "IPAllocationPolicy": "dhcpPolicy",
+        "IPProtocol": "IPv4",
+        "PropertyMapping": [
+            {
+                "Key": "vcloudapp.ntp-server.VMware_vCloud_Director",
+                "Value": "{{zpod_ntp}}"
+            },
+            {
+                "Key": "vcloudapp.varoot-password.VMware_vCloud_Director",
+                "Value": "{{zpod_password}}"
+            },
+            {
+                "Key": "vcloudapp.expire_root_password.VMware_vCloud_Director",
+                "Value": "False"
+            },
+            {
+                "Key": "vcloudapp.enable_ssh.VMware_vCloud_Director",
+                "Value": "True"
+            },
+            {
+                "Key": "vcloudnet.routes0.VMware_vCloud_Director",
+                "Value": ""
+            },
+            {
+                "Key": "vcloudnet.routes1.VMware_vCloud_Director",
+                "Value": ""
+            },
+            {
+                "Key": "vami.gateway.VMware_vCloud_Director",
+                "Value": "{{zpod_gateway}}"
+            },
+            {
+                "Key": "vami.domain.VMware_vCloud_Director",
+                "Value": "{{zpod_domain}}"
+            },
+            {
+                "Key": "vami.searchpath.VMware_vCloud_Director",
+                "Value": "{{zpod_domain}}"
+            },
+            {
+                "Key": "vami.DNS.VMware_vCloud_Director",
+                "Value": "{{zpod_dns}}"
+            },
+            {
+                "Key": "vami.ip0.VMware_vCloud_Director",
+                "Value": "{{zpod_ipaddress}}"
+            },
+            {
+                "Key": "vami.netmask0.VMware_vCloud_Director",
+                "Value": "{{zpod_netmask}}"
+            },
+            {
+                "Key": "vami.ip1.VMware_vCloud_Director",
+                "Value": "192.168.1.40"
+            },
+            {
+                "Key": "vami.netmask1.VMware_vCloud_Director",
+                "Value": "{{zpod_netmask}}"
+            }
+        ],
+        "NetworkMapping": [
+            {
+                "Name": "eth0 Network",
+                "Network": "{{zpod_portgroup}}"
+            },
+            {
+                "Name": "eth1 Network",
+                "Network": "{{zpod_portgroup}}"
+            }
+        ],
+        "Annotation": "VMware vCloud Director",
+        "MarkAsTemplate": false,
+        "PowerOn": false,
+        "InjectOvfEnv": true,
+        "WaitForIP": false,
+        "Name": null
+    },
+    "component_isnested": true
+}
