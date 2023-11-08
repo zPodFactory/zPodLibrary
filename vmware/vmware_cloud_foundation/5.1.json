@@ -1,0 +1,15 @@
+{
+    "component_name": "vcf",
+    "component_version": "5.1",
+    "component_type": "vcf",
+    "component_description": "VMware Cloud Foundation",
+    "component_url": "https://www.vmware.com/products/cloud-foundation.html",
+    "component_download_engine": "customerconnect",
+    "component_download_product": "vmware_cloud_foundation",
+    "component_download_subproduct": "vcf",
+    "component_download_version": "5.1",
+    "component_download_file": "VMware-Cloud-Builder-5.1.0.0-22688368_OVF10.ova",
+    "component_download_file_checksum": "sha256:f7ea29d4f453ae7f6b03e8214b84e76dd1b935d577a580dc712d5e21b3e3103f",
+    "component_download_file_size": "29.48 GB",
+    "component_isnested": false
+}
