@@ -11,5 +11,71 @@
     "component_download_file": "VMware-Cloud-Builder-5.1.0.0-22688368_OVF10.ova",
     "component_download_file_checksum": "sha256:f7ea29d4f453ae7f6b03e8214b84e76dd1b935d577a580dc712d5e21b3e3103f",
     "component_download_file_size": "29.48 GB",
+    "component_deploy_govc_spec": {
+        "DiskProvisioning": "thin",
+        "IPAllocationPolicy": "dhcpPolicy",
+        "IPProtocol": "IPv4",
+        "PropertyMapping": [
+            {
+                "Key": "FIPS_ENABLE",
+                "Value": "False"
+            },
+            {
+                "Key": "guestinfo.ADMIN_USERNAME",
+                "Value": "admin"
+            },
+            {
+                "Key": "guestinfo.ADMIN_PASSWORD",
+                "Value": "{{zpod_password}}"
+            },
+            {
+                "Key": "guestinfo.ROOT_PASSWORD",
+                "Value": "{{zpod_password}}"
+            },
+            {
+                "Key": "guestinfo.hostname",
+                "Value": "{{zpod_hostname}}"
+            },
+            {
+                "Key": "guestinfo.ip0",
+                "Value": "{{zpod_ipaddress}}"
+            },
+            {
+                "Key": "guestinfo.netmask0",
+                "Value": "{{zpod_netmask}}"
+            },
+            {
+                "Key": "guestinfo.gateway",
+                "Value": "{{zpod_gateway}}"
+            },
+            {
+                "Key": "guestinfo.DNS",
+                "Value": "{{zpod_dns}}"
+            },
+            {
+                "Key": "guestinfo.domain",
+                "Value": "{{zpod_domain}}"
+            },
+            {
+                "Key": "guestinfo.searchpath",
+                "Value": "{{zpod_searchpath}}"
+            },
+            {
+                "Key": "guestinfo.ntp",
+                "Value": "{{zpod_ntp}}"
+            }
+        ],
+        "NetworkMapping": [
+            {
+                "Name": "Network 1",
+                "Network": "{{zpod_portgroup}}"
+            }
+        ],
+        "MarkAsTemplate": false,
+        "PowerOn": false,
+        "InjectOvfEnv": true,
+        "WaitForIP": false,
+        "Name": null
+    },
     "component_isnested": false
 }
