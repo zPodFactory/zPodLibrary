@@ -11,5 +11,80 @@
     "component_download_file": "VMware-NSX-Manager-6.4.13-19307994.ova",
     "component_download_file_checksum": "sha256:0db7ad9339ec3cae3e3d3f7c5c1e6109bae0b587b8735192d06718eab67b42c4",
     "component_download_file_size": "2.69 GB",
+    "component_deploy_govc_spec": {
+        "DiskProvisioning": "flat",
+        "IPAllocationPolicy": "dhcpPolicy",
+        "IPProtocol": "IPv4",
+        "PropertyMapping": [
+            {
+                "Key": "vsm_cli_passwd_0",
+                "Value": "{{zpod_password}}"
+            },
+            {
+                "Key": "vsm_cli_en_passwd_0",
+                "Value": "{{zpod_password}}"
+            },
+            {
+                "Key": "vsm_hostname",
+                "Value": "{{zpod_hostname}}"
+            },
+            {
+                "Key": "vsm_ip_0",
+                "Value": "{{zpod_ipaddress}}"
+            },
+            {
+                "Key": "vsm_netmask_0",
+                "Value": "{{zpod_netmask}}"
+            },
+            {
+                "Key": "vsm_gateway_0",
+                "Value": "{{zpod_gateway}}"
+            },
+            {
+                "Key": "vsm_ipv6_0",
+                "Value": ""
+            },
+            {
+                "Key": "vsm_prefix_ipv6_0",
+                "Value": ""
+            },
+            {
+                "Key": "vsm_gateway_ipv6_0",
+                "Value": ""
+            },
+            {
+                "Key": "vsm_dns1_0",
+                "Value": "{{zpod_dns}}"
+            },
+            {
+                "Key": "vsm_domain_0",
+                "Value": "{{zpod_domain}}"
+            },
+            {
+                "Key": "vsm_ntp_0",
+                "Value": "{{zpod_ntp}}"
+            },
+            {
+                "Key": "vsm_isSSHEnabled",
+                "Value": "True"
+            },
+            {
+                "Key": "vsm_isCEIPEnabled",
+                "Value": "True"
+            }
+        ],
+        "NetworkMapping": [
+            {
+                "Name": "Management Network",
+                "Network": "{{zpod_portgroup}}"
+            }
+        ],
+        "Annotation": "NSX Manager is the centralized network management component of VMware NSX for vSphere. VMware NSX is the network virtualization platform that delivers the operational model of a VM for the network to transform data center operations and economics. NSX Manager is installed as a virtual appliance on any ESX™ host in your vCenter Server environment. You should install the NSX Manager virtual appliance on an ESX host separate from your NSX components. You may use the NSX Manager Appliance Management User Interface, Command Line Interface and vSphere Web Client User Interface to install, configure and maintain NSX components.",
+        "MarkAsTemplate": false,
+        "PowerOn": false,
+        "InjectOvfEnv": false,
+        "WaitForIP": false,
+        "Name": null
+    },
     "component_isnested": true
 }
