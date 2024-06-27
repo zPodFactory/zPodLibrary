@@ -1,0 +1,62 @@
+{
+    "component_name": "zbox",
+    "component_version": "12.5",
+    "component_type": "zbox",
+    "component_description": "zBox Utility VM with core services (DNS, DHCP, NTP, NFS, etc.)",
+    "component_url": "https://github.com/zPodFactory",
+    "component_download_engine": "https",
+    "component_download_file": "https://cloud.tsugliani.fr/ova/zbox-core-services-12.5.ova",
+    "component_download_file_checksum": "sha256:a0a89db6e4997c4bc0370de060997edf5b7003f9239330eeb4dd2ba7a2602376",
+    "component_download_file_size": "835 MB",
+    "component_deploy_govc_spec": {
+        "DiskProvisioning": "thin",
+        "IPAllocationPolicy": "dhcpPolicy",
+        "IPProtocol": "IPv4",
+        "PropertyMapping": [
+            {
+                "Key": "guestinfo.hostname",
+                "Value": "{{zpod_hostname}}"
+            },
+            {
+                "Key": "guestinfo.ipaddress",
+                "Value": "{{zpod_ipaddress}}"
+            },
+            {
+                "Key": "guestinfo.netprefix",
+                "Value": "{{zpod_netprefix}}"
+            },
+            {
+                "Key": "guestinfo.gateway",
+                "Value": "{{zpod_gateway}}"
+            },
+            {
+                "Key": "guestinfo.dns",
+                "Value": "{{zpod_dns}}"
+            },
+            {
+                "Key": "guestinfo.domain",
+                "Value": "{{zpod_domain}}"
+            },
+            {
+                "Key": "guestinfo.password",
+                "Value": "{{zpod_password}}"
+            },
+            {
+                "Key": "guestinfo.sshkey",
+                "Value": "{{zpod_sshkey}}"
+            }
+        ],
+        "NetworkMapping": [
+            {
+                "Name": "VM Network",
+                "Network": "{{zpod_portgroup}}"
+            }
+        ],
+        "MarkAsTemplate": false,
+        "PowerOn": false,
+        "InjectOvfEnv": true,
+        "WaitForIP": false,
+        "Name": null
+    },
+    "component_isnested": false
+}
