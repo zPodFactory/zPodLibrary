@@ -18,40 +18,64 @@
         "IPProtocol": "IPv4",
         "PropertyMapping": [
             {
-                "Key": "vamitimezone",
+                "Key": "timezone",
                 "Value": "Etc/UTC"
-            },
-            {
-                "Key": "forceIpv6",
-                "Value": "False"
             },
             {
                 "Key": "enableFIPS",
                 "Value": "False"
             },
             {
-                "Key": "vami.gateway.vRealize_Operations_Appliance",
-                "Value": "{{zpod_gateway}}"
+                "Key": "guestinfo.cis.appliance.ssh.enabled",
+                "Value": "true"
             },
             {
-                "Key": "vami.domain.vRealize_Operations_Appliance",
+                "Key": "domain.VMware_Aria_Operations",
                 "Value": "{{zpod_domain}}"
             },
             {
-                "Key": "vami.searchpath.vRealize_Operations_Appliance",
+                "Key": "searchpath.VMware_Aria_Operations",
                 "Value": "{{zpod_domain}}"
             },
             {
-                "Key": "vami.DNS.vRealize_Operations_Appliance",
+                "Key": "DNS.VMware_Aria_Operations",
                 "Value": "{{zpod_dns}}"
             },
             {
-                "Key": "vami.ip0.vRealize_Operations_Appliance",
+                "Key": "ipv4_type.VMware_Aria_Operations",
+                "Value": "Static"
+            },
+            {
+                "Key": "ipv4_address.VMware_Aria_Operations",
                 "Value": "{{zpod_ipaddress}}"
             },
             {
-                "Key": "vami.netmask0.vRealize_Operations_Appliance",
+                "Key": "ipv4_gateway.VMware_Aria_Operations",
+                "Value": "{{zpod_gateway}}"
+            },
+            {
+                "Key": "ipv4_netmask.VMware_Aria_Operations",
                 "Value": "{{zpod_netmask}}"
+            },
+            {
+                "Key": "forceIpv6.VMware_Aria_Operations",
+                "Value": "False"
+            },
+            {
+                "Key": "ipv6_type.VMware_Aria_Operations",
+                "Value": "DHCP/Slaac"
+            },
+            {
+                "Key": "ipv6_address.VMware_Aria_Operations",
+                "Value": ""
+            },
+            {
+                "Key": "ipv6_gateway.VMware_Aria_Operations",
+                "Value": ""
+            },
+            {
+                "Key": "ipv6_netmask.VMware_Aria_Operations",
+                "Value": ""
             }
         ],
         "NetworkMapping": [
