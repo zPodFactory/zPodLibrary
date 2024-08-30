@@ -1,0 +1,79 @@
+{
+    "component_name": "vrli",
+    "component_version": "8.18",
+    "component_type": "vrli",
+    "component_description": "VMware vRealize Log Insight",
+    "component_url": "https://www.vmware.com/fr/products/aria-operations-for-logs.html",
+    "component_download_engine": "customerconnect",
+    "component_download_product": "vmware_aria_operations_for_logs",
+    "component_download_subproduct": "oplogs",
+    "component_download_version": "8.18",
+    "component_download_file": "VMware-vRealize-Log-Insight-8.16.0.0-23364779.ova",
+    "component_download_file_checksum": "sha256:dbd3e7f140ebd6320510516f775259e8ec202d35d38a6ee4689cf4e862167422",
+    "component_download_file_size": "1.11 GB",
+    "component_deploy_govc_spec": {
+        "Deployment": "small",
+        "DiskProvisioning": "thin",
+        "IPAllocationPolicy": "dhcpPolicy",
+        "IPProtocol": "IPv4",
+        "PropertyMapping": [
+            {
+                "Key": "preferipv6",
+                "Value": "False"
+            },
+            {
+                "Key": "rootpw",
+                "Value": "{{zpod_password}}"
+            },
+            {
+                "Key": "hostname",
+                "Value": "{{zpod_hostname}}"
+            },
+            {
+                "Key": "sshkey",
+                "Value": "{{zpod_sshkey}}"
+            },
+            {
+                "Key": "fips",
+                "Value": "False"
+            },
+            {
+                "Key": "vami.gateway.VMware_vCenter_Log_Insight",
+                "Value": "{{zpod_gateway}}"
+            },
+            {
+                "Key": "vami.domain.VMware_vCenter_Log_Insight",
+                "Value": "{{zpod_domain}}"
+            },
+            {
+                "Key": "vami.searchpath.VMware_vCenter_Log_Insight",
+                "Value": "{{zpod_domain}}"
+            },
+            {
+                "Key": "vami.DNS.VMware_vCenter_Log_Insight",
+                "Value": "{{zpod_dns}}"
+            },
+            {
+                "Key": "vami.ip0.VMware_vCenter_Log_Insight",
+                "Value": "{{zpod_ipaddress}}"
+            },
+            {
+                "Key": "vami.netmask0.VMware_vCenter_Log_Insight",
+                "Value": "{{zpod_netmask}}"
+            }
+        ],
+        "NetworkMapping": [
+            {
+                "Name": "Network 1",
+                "Network": "{{zpod_portgroup}}"
+            }
+        ],
+        "Annotation": "VMware Aria Operations for Logs",
+        "MarkAsTemplate": false,
+        "PowerOn": false,
+        "InjectOvfEnv": true,
+        "WaitForIP": false,
+        "Name": null
+    },
+    "component_isnested": true
+}
