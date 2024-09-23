@@ -1,0 +1,95 @@
+{
+    "component_name": "vrops",
+    "component_version": "8.18.1",
+    "component_type": "vrops",
+    "component_description": "VMware vRealize Operations",
+    "component_url": "https://apps-cloudmgmt.techzone.vmware.com/vmware-aria-operations",
+    "component_download_engine": "customerconnect",
+    "component_download_product": "vmware_aria_operations",
+    "component_download_subproduct": "operations",
+    "component_download_version": "8.18.1",
+    "component_download_file": "vRealize-Operations-Manager-Appliance-8.18.1.24267784.ova",
+    "component_download_file_checksum": "sha256:89108466680306eca78ed716c7d3479fbbb44d3c4f0ac298c05195a25c5a83e1",
+    "component_download_file_size": "3.21 GB",
+    "component_deploy_govc_spec": {
+        "Deployment": "small",
+        "DiskProvisioning": "thin",
+        "IPAllocationPolicy": "dhcpPolicy",
+        "IPProtocol": "IPv4",
+        "PropertyMapping": [
+            {
+                "Key": "timezone",
+                "Value": "Etc/UTC"
+            },
+            {
+                "Key": "enableFIPS",
+                "Value": "False"
+            },
+            {
+                "Key": "guestinfo.cis.appliance.ssh.enabled",
+                "Value": "true"
+            },
+            {
+                "Key": "domain.VMware_Aria_Operations",
+                "Value": "{{zpod_domain}}"
+            },
+            {
+                "Key": "searchpath.VMware_Aria_Operations",
+                "Value": "{{zpod_domain}}"
+            },
+            {
+                "Key": "DNS.VMware_Aria_Operations",
+                "Value": "{{zpod_dns}}"
+            },
+            {
+                "Key": "ipv4_type.VMware_Aria_Operations",
+                "Value": "Static"
+            },
+            {
+                "Key": "ipv4_address.VMware_Aria_Operations",
+                "Value": "{{zpod_ipaddress}}"
+            },
+            {
+                "Key": "ipv4_gateway.VMware_Aria_Operations",
+                "Value": "{{zpod_gateway}}"
+            },
+            {
+                "Key": "ipv4_netmask.VMware_Aria_Operations",
+                "Value": "{{zpod_netmask}}"
+            },
+            {
+                "Key": "forceIpv6.VMware_Aria_Operations",
+                "Value": "False"
+            },
+            {
+                "Key": "ipv6_type.VMware_Aria_Operations",
+                "Value": "DHCP/Slaac"
+            },
+            {
+                "Key": "ipv6_address.VMware_Aria_Operations",
+                "Value": ""
+            },
+            {
+                "Key": "ipv6_gateway.VMware_Aria_Operations",
+                "Value": ""
+            },
+            {
+                "Key": "ipv6_netmask.VMware_Aria_Operations",
+                "Value": ""
+            }
+        ],
+        "NetworkMapping": [
+            {
+                "Name": "Network 1",
+                "Network": "{{zpod_portgroup}}"
+            }
+        ],
+        "Annotation": "vRealize Operations Appliance 8.18.0.24025145 running on Photon OS",
+        "MarkAsTemplate": false,
+        "PowerOn": false,
+        "InjectOvfEnv": true,
+        "WaitForIP": false,
+        "Name": null
+    },
+    "component_isnested": true
+}
