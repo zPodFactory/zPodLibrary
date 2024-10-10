@@ -1,0 +1,81 @@
+{
+    "component_name": "cloudbuilder",
+    "component_version": "5.2.1",
+    "component_type": "cloudbuilder",
+    "component_description": "VMware Cloud Foundation",
+    "component_url": "https://www.vmware.com/products/cloud-foundation.html",
+    "component_download_engine": "customerconnect",
+    "component_download_product": "vmware_cloud_foundation",
+    "component_download_subproduct": "vcf",
+    "component_download_version": "5.2.1",
+    "component_download_file": "VMware-Cloud-Builder-5.2.1.0-24307856_OVF10.ova",
+    "component_download_file_checksum": "sha256:c7cf7ee2d196eac18949505fff8b438b92d0980ed19af6d472d025074ad16e9e",
+    "component_download_file_size": "29.07 GB",
+    "component_deploy_govc_spec": {
+        "DiskProvisioning": "thin",
+        "IPAllocationPolicy": "dhcpPolicy",
+        "IPProtocol": "IPv4",
+        "PropertyMapping": [
+            {
+                "Key": "FIPS_ENABLE",
+                "Value": "False"
+            },
+            {
+                "Key": "guestinfo.ADMIN_USERNAME",
+                "Value": "admin"
+            },
+            {
+                "Key": "guestinfo.ADMIN_PASSWORD",
+                "Value": "{{zpod_password}}"
+            },
+            {
+                "Key": "guestinfo.ROOT_PASSWORD",
+                "Value": "{{zpod_password}}"
+            },
+            {
+                "Key": "guestinfo.hostname",
+                "Value": "{{zpod_hostname}}"
+            },
+            {
+                "Key": "guestinfo.ip0",
+                "Value": "{{zpod_ipaddress}}"
+            },
+            {
+                "Key": "guestinfo.netmask0",
+                "Value": "{{zpod_netmask}}"
+            },
+            {
+                "Key": "guestinfo.gateway",
+                "Value": "{{zpod_gateway}}"
+            },
+            {
+                "Key": "guestinfo.DNS",
+                "Value": "{{zpod_dns}}"
+            },
+            {
+                "Key": "guestinfo.domain",
+                "Value": "{{zpod_domain}}"
+            },
+            {
+                "Key": "guestinfo.searchpath",
+                "Value": "{{zpod_searchpath}}"
+            },
+            {
+                "Key": "guestinfo.ntp",
+                "Value": "{{zpod_ntp}}"
+            }
+        ],
+        "NetworkMapping": [
+            {
+                "Name": "Network 1",
+                "Network": "{{zpod_portgroup}}"
+            }
+        ],
+        "MarkAsTemplate": false,
+        "PowerOn": false,
+        "InjectOvfEnv": true,
+        "WaitForIP": false,
+        "Name": null
+    },
+    "component_isnested": false
+}
