@@ -1,16 +1,16 @@
 {
     "component_name": "vrops",
-    "component_version": "8.18.1",
+    "component_version": "8.18.2",
     "component_type": "vrops",
     "component_description": "VMware vRealize Operations",
     "component_url": "https://apps-cloudmgmt.techzone.vmware.com/vmware-aria-operations",
     "component_download_engine": "customerconnect",
     "component_download_product": "vmware_aria_operations",
     "component_download_subproduct": "operations",
-    "component_download_version": "8.18.1",
-    "component_download_file": "vRealize-Operations-Manager-Appliance-8.18.1.24267784.ova",
-    "component_download_file_checksum": "sha256:89108466680306eca78ed716c7d3479fbbb44d3c4f0ac298c05195a25c5a83e1",
-    "component_download_file_size": "3.21 GB",
+    "component_download_version": "8.18.2",
+    "component_download_file": "vRealize-Operations-Manager-Appliance-8.18.2.24394060.ova",
+    "component_download_file_checksum": "sha256:574bb193708fa812cb2d74aaee0dbbd72bd2f2a4cfd3c252203062c75927cbb5",
+    "component_download_file_size": "3.22 GB",
     "component_deploy_govc_spec": {
         "Deployment": "small",
         "DiskProvisioning": "thin",
@@ -84,7 +84,7 @@
                 "Network": "{{zpod_portgroup}}"
             }
         ],
-        "Annotation": "vRealize Operations Appliance 8.18.1 running on Photon OS",
+        "Annotation": "vRealize Operations Appliance 8.18.2 running on Photon OS",
         "MarkAsTemplate": false,
         "PowerOn": false,
         "InjectOvfEnv": true,
