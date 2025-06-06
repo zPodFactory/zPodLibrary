@@ -1,0 +1,142 @@
+{
+    "component_name": "nsx",
+    "component_version": "4.2.2.1",
+    "component_type": "nsx",
+    "component_description": "VMware NSX",
+    "component_url": "https://www.vmware.com/products/nsx.html",
+    "component_download_engine": "customerconnect",
+    "component_download_product": "vmware_nsx",
+    "component_download_subproduct": "nsx",
+    "component_download_version": "4.2.2.1",
+    "component_download_file": "nsx-unified-appliance-4.2.2.1.0.24765087.ova",
+    "component_download_file_checksum": "sha256:14c8cece3d8acf8069a2b7e9facdf6e6734ccce678d7a55e3bab62779217761e",
+    "component_download_file_size": "11.77 GB",
+    "component_deploy_govc_spec": {
+        "Deployment": "medium",
+        "DiskProvisioning": "thin",
+        "IPAllocationPolicy": "dhcpPolicy",
+        "IPProtocol": "IPv4",
+        "PropertyMapping": [
+            {
+                "Key": "nsx_grub_passwd",
+                "Value": "{{zpod_password}}"
+            },
+            {
+                "Key": "nsx_grub_menu_timeout",
+                "Value": ""
+            },
+            {
+                "Key": "nsx_passwd_0",
+                "Value": "{{zpod_password}}"
+            },
+            {
+                "Key": "nsx_cli_passwd_0",
+                "Value": "{{zpod_password}}"
+            },
+            {
+                "Key": "nsx_cli_audit_passwd_0",
+                "Value": ""
+            },
+            {
+                "Key": "nsx_cli_username",
+                "Value": ""
+            },
+            {
+                "Key": "nsx_cli_audit_username",
+                "Value": ""
+            },
+            {
+                "Key": "extraPara",
+                "Value": ""
+            },
+            {
+                "Key": "nsx_hostname",
+                "Value": "{{zpod_hostname}}.{{zpod_domain}}"
+            },
+            {
+                "Key": "nsx_role",
+                "Value": "NSX Manager"
+            },
+            {
+                "Key": "nsx_ip_0",
+                "Value": "{{zpod_ipaddress}}"
+            },
+            {
+                "Key": "nsx_netmask_0",
+                "Value": "{{zpod_netmask}}"
+            },
+            {
+                "Key": "nsx_gateway_0",
+                "Value": "{{zpod_gateway}}"
+            },
+            {
+                "Key": "nsx_ip6_0",
+                "Value": ""
+            },
+            {
+                "Key": "nsx_netmask6_0",
+                "Value": ""
+            },
+            {
+                "Key": "nsx_gateway6_0",
+                "Value": ""
+            },
+            {
+                "Key": "nsx_dns1_0",
+                "Value": "{{zpod_dns}}"
+            },
+            {
+                "Key": "nsx_domain_0",
+                "Value": "{{zpod_domain}}"
+            },
+            {
+                "Key": "nsx_ntp_0",
+                "Value": "{{zpod_ntp}}"
+            },
+            {
+                "Key": "nsx_isSSHEnabled",
+                "Value": "True"
+            },
+            {
+                "Key": "nsx_allowSSHRootLogin",
+                "Value": "False"
+            },
+            {
+                "Key": "nsx_swIntegrityCheck",
+                "Value": "False"
+            },
+            {
+                "Key": "mpIp",
+                "Value": ""
+            },
+            {
+                "Key": "mpToken",
+                "Value": ""
+            },
+            {
+                "Key": "mpThumbprint",
+                "Value": ""
+            },
+            {
+                "Key": "mpNodeId",
+                "Value": ""
+            },
+            {
+                "Key": "mpClusterId",
+                "Value": ""
+            }
+        ],
+        "NetworkMapping": [
+            {
+                "Name": "Network 1",
+                "Network": "{{zpod_portgroup}}"
+            }
+        ],
+        "MarkAsTemplate": false,
+        "PowerOn": false,
+        "InjectOvfEnv": true,
+        "WaitForIP": false,
+        "Name": null
+    },
+    "component_isnested": true
+}
