@@ -1,0 +1,62 @@
+{
+    "component_name": "zrdp",
+    "component_version": "13.1",
+    "component_type": "zrdp",
+    "component_description": "zBox Desktop Appliance (xrdp)",
+    "component_url": "https://github.com/zPodFactory",
+    "component_download_engine": "https",
+    "component_download_file": "https://cloud.tsugliani.fr/ova/zboxdesktop-13.1.ova",
+    "component_download_file_checksum": "sha256:077a38ee7e532cca1e12083f2e3dfc9bd39c27a013744e5c9dd90cd62e36ef6f",
+    "component_download_file_size": "1.7 GB",
+    "component_deploy_govc_spec": {
+        "DiskProvisioning": "thin",
+        "IPAllocationPolicy": "dhcpPolicy",
+        "IPProtocol": "IPv4",
+        "PropertyMapping": [
+            {
+                "Key": "guestinfo.hostname",
+                "Value": "{{zpod_hostname}}"
+            },
+            {
+                "Key": "guestinfo.ipaddress",
+                "Value": "{{zpod_ipaddress}}"
+            },
+            {
+                "Key": "guestinfo.netprefix",
+                "Value": "{{zpod_netprefix}}"
+            },
+            {
+                "Key": "guestinfo.gateway",
+                "Value": "{{zpod_gateway}}"
+            },
+            {
+                "Key": "guestinfo.dns",
+                "Value": "{{zpod_dns}}"
+            },
+            {
+                "Key": "guestinfo.domain",
+                "Value": "{{zpod_domain}}"
+            },
+            {
+                "Key": "guestinfo.password",
+                "Value": "{{zpod_password}}"
+            },
+            {
+                "Key": "guestinfo.sshkey",
+                "Value": "{{zpod_sshkey}}"
+            }
+        ],
+        "NetworkMapping": [
+            {
+                "Name": "VM Network",
+                "Network": "{{zpod_portgroup}}"
+            }
+        ],
+        "MarkAsTemplate": false,
+        "PowerOn": false,
+        "InjectOvfEnv": true,
+        "WaitForIP": false,
+        "Name": null
+    },
+    "component_isnested": true
+}
