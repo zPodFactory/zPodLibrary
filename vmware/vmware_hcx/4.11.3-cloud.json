@@ -1,0 +1,106 @@
+{
+  "component_name": "hcx-cloud",
+  "component_version": "4.11.3",
+  "component_type": "hcx",
+  "component_description": "VMware HCX Connector",
+  "component_url": "https://www.vmware.com/fr/products/hcx.html",
+  "component_download_engine": "customerconnect",
+  "component_download_product": "vmware_hcx",
+  "component_download_subproduct": "hcx",
+  "component_download_version": "4.11.3",
+  "component_download_file": "VMware-HCX-Cloud-4.11.3.0-24972693.ova",
+  "component_download_file_checksum": "sha256:7381b7e842ad3591b2a533ee493dcf7aafb2226d045f1c09d5e25c7c586e2e80",
+  "component_download_file_size": "4.06 GB",
+  "component_deploy_govc_spec": {
+    "DiskProvisioning": "thin",
+    "IPAllocationPolicy": "dhcpPolicy",
+    "IPProtocol": "IPv4",
+    "PropertyMapping": [
+      {
+        "Key": "mgr_cli_passwd",
+        "Value": "{{zpod_password}}"
+      },
+      {
+        "Key": "mgr_root_passwd",
+        "Value": "{{zpod_password}}"
+      },
+      {
+        "Key": "hostname",
+        "Value": "{{zpod_hostname}}"
+      },
+      {
+        "Key": "mgr_ip_0",
+        "Value": "{{zpod_ipaddress}}"
+      },
+      {
+        "Key": "mgr_prefix_ip_0",
+        "Value": "{{zpod_netprefix}}"
+      },
+      {
+        "Key": "mgr_gateway_0",
+        "Value": "{{zpod_gateway}}"
+      },
+      {
+        "Key": "mgr_static_network_1",
+        "Value": ""
+      },
+      {
+        "Key": "mgr_static_network_prefix_1",
+        "Value": ""
+      },
+      {
+        "Key": "mgr_static_gateway_ip_1",
+        "Value": ""
+      },
+      {
+        "Key": "mgr_static_network_2",
+        "Value": ""
+      },
+      {
+        "Key": "mgr_static_network_prefix_2",
+        "Value": ""
+      },
+      {
+        "Key": "mgr_static_gateway_ip_2",
+        "Value": ""
+      },
+      {
+        "Key": "mgr_dns_list",
+        "Value": "{{zpod_dns}}"
+      },
+      {
+        "Key": "mgr_domain_search_list",
+        "Value": "{{zpod_domain}}"
+      },
+      {
+        "Key": "mgr_ntp_list",
+        "Value": "{{zpod_ntp}}"
+      },
+      {
+        "Key": "mgr_isSSHEnabled",
+        "Value": "True"
+      },
+      {
+        "Key": "depl_isGovCloudMode",
+        "Value": "False"
+      },
+      {
+        "Key": "depl_activationType",
+        "Value": "False"
+      }
+    ],
+    "NetworkMapping": [
+      {
+        "Name": "VSMgmt",
+        "Network": "{{zpod_portgroup}}"
+      }
+    ],
+    "Annotation": "HCX enables your Enterprise Hybrid Cloud Mobility. Datacenter migrations are complex elongated processes. Moving to a datacenter across the WAN is even more complicated. VMware HCX allow efficient datacenter migration beginning at datacenter setup and design through migrations leveraging VMware technologies such as Cross-Cloud vMotion. Learn about VMware's SD-WAN technologies with high throughput Layer-2 Network Extension, Disaster Recovery, Low/No Downtime Migration and optimized datacenter-to-datacenter or datacenter-to-cloud connectivity. HCX™ offers vSphere users a seamless option for extending their on-premises data center into your Hybrid Cloud. HCX is a single point of administration for Hybrid Cloud workloads that offers hybrid networking and bi-directional workload migration capabilities, simplifying on and off-premises resource integration and management workloads.",
+    "MarkAsTemplate": false,
+    "PowerOn": false,
+    "InjectOvfEnv": false,
+    "WaitForIP": false,
+    "Name": null
+  },
+  "component_isnested": true
+}
