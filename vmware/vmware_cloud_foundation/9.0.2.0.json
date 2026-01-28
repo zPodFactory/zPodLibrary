@@ -1,0 +1,74 @@
+{
+    "component_name": "vcfinstaller",
+    "component_version": "9.0.2.0",
+    "component_type": "vcfinstaller",
+    "component_description": "VMware Cloud Foundation",
+    "component_url": "https://www.vmware.com/products/cloud-foundation.html",
+    "component_download_engine": "https",
+    "component_download_file": "https://dl.broadcom.com/BROADCOM_DOWNLOAD_TOKEN/PROD/COMP/SDDC_MANAGER_VCF/VCF-SDDC-Manager-Appliance-9.0.2.0.25151285.ova",
+    "component_download_file_checksum": "sha256:a87cf3da7eb37e6d6874cdd761b624baa0b0a6931167bc4988d38dcc882832a6",
+    "component_download_file_size": "2 GB",
+    "component_deploy_govc_spec": {
+        "DiskProvisioning": "thin",
+        "IPAllocationPolicy": "dhcpPolicy",
+        "IPProtocol": "IPv4",
+        "PropertyMapping": [
+            {
+                "Key": "ROOT_PASSWORD",
+                "Value": "{{zpod_password}}"
+            },
+            {
+                "Key": "LOCAL_USER_PASSWORD",
+                "Value": "{{zpod_password}}"
+            },
+            {
+                "Key": "vami.hostname",
+                "Value": "{{zpod_hostname}}.{{zpod_domain}}"
+            },
+            {
+                "Key": "guestinfo.ntp",
+                "Value": "{{zpod_ntp}}"
+            },
+            {
+                "Key": "FIPS_ENABLE",
+                "Value": "False"
+            },
+            {
+                "Key": "vami.ip0.SDDC-Manager",
+                "Value": "{{zpod_ipaddress}}"
+            },
+            {
+                "Key": "vami.netmask0.SDDC-Manager",
+                "Value": "{{zpod_netmask}}"
+            },
+            {
+                "Key": "vami.gateway.SDDC-Manager",
+                "Value": "{{zpod_gateway}}"
+            },
+            {
+                "Key": "vami.domain.SDDC-Manager",
+                "Value": "{{zpod_domain}}"
+            },
+            {
+                "Key": "vami.searchpath.SDDC-Manager",
+                "Value": "{{zpod_domain}}"
+            },
+            {
+                "Key": "vami.DNS.SDDC-Manager",
+                "Value": "{{zpod_dns}}"
+            }
+        ],
+        "NetworkMapping": [
+            {
+                "Name": "Network 1",
+                "Network": "{{zpod_portgroup}}"
+            }
+        ],
+        "MarkAsTemplate": false,
+        "PowerOn": false,
+        "InjectOvfEnv": true,
+        "WaitForIP": false,
+        "Name": null
+    },
+    "component_isnested": false
+}
