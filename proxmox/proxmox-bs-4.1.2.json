@@ -1,0 +1,62 @@
+{
+    "component_name": "proxmox-bs",
+    "component_version": "4.1.2",
+    "component_type": "proxmox-bs",
+    "component_description": "Proxmox Backup Server",
+    "component_url": "https://github.com/zPodFactory",
+    "component_download_engine": "https",
+    "component_download_file": "https://cloud.tsugliani.fr/ova/zproxmox-backup-server-4.1.2.ova",
+    "component_download_file_checksum": "sha256:f171e0d63b2bb409d30ab8a6f4fb9082dd6a78d9f76823a157ff121e9536d0ae",
+    "component_download_file_size": "1310 MB",
+    "component_deploy_govc_spec": {
+        "DiskProvisioning": "thin",
+        "IPAllocationPolicy": "dhcpPolicy",
+        "IPProtocol": "IPv4",
+        "PropertyMapping": [
+            {
+                "Key": "guestinfo.hostname",
+                "Value": "{{zpod_hostname}}"
+            },
+            {
+                "Key": "guestinfo.ipaddress",
+                "Value": "{{zpod_ipaddress}}"
+            },
+            {
+                "Key": "guestinfo.netprefix",
+                "Value": "{{zpod_netprefix}}"
+            },
+            {
+                "Key": "guestinfo.gateway",
+                "Value": "{{zpod_gateway}}"
+            },
+            {
+                "Key": "guestinfo.dns",
+                "Value": "{{zpod_dns}}"
+            },
+            {
+                "Key": "guestinfo.domain",
+                "Value": "{{zpod_domain}}"
+            },
+            {
+                "Key": "guestinfo.password",
+                "Value": "{{zpod_password}}"
+            },
+            {
+                "Key": "guestinfo.sshkey",
+                "Value": "{{zpod_sshkey}}"
+            }
+        ],
+        "NetworkMapping": [
+            {
+                "Name": "VM Network",
+                "Network": "{{zpod_portgroup}}"
+            }
+        ],
+        "MarkAsTemplate": false,
+        "PowerOn": false,
+        "InjectOvfEnv": true,
+        "WaitForIP": false,
+        "Name": null
+    },
+    "component_isnested": false
+}
