@@ -6,7 +6,7 @@
     "component_url": "https://vmwa.re/nestedesxi",
     "component_download_engine": "https",
     "component_download_file": "https://support.broadcom.com/thiswillnotwork/Nested_ESXi9.1.0.0_Appliance_Template_v1.0.ova",
-    "component_download_file_checksum": "sha256:391e283c0bdf8c4abaf4786661b29b10ac4999d5e0bf6e4f223840ddf72bd515",
+    "component_download_file_checksum": "sha256:2912ad360af67226d1e15edaf8bdde31568cdc7b2f59ede08102ee64ead567ad",
     "component_download_file_size": "1.1 GB",
     "component_deploy_govc_spec": {
         "DiskProvisioning": "thin",
