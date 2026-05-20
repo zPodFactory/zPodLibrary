@@ -4,11 +4,11 @@
     "component_type": "vcsa",
     "component_description": "VMware vCenter Server",
     "component_url": "https://www.vmware.com/products/vcenter.html",
-    "component_download_engine": "customerconnect",
+    "component_download_engine": "https",
     "component_download_product": "vmware_vsphere",
     "component_download_subproduct": "vc",
     "component_download_version": "8.0U1c",
-    "component_download_file": "VMware-VCSA-all-8.0.1-22088981.iso",
+    "component_download_file": "https://dl.broadcom.com/${BROADCOM_DOWNLOAD_TOKEN}/PROD/COMP/VCENTER/VMware-VCSA-all-8.0.1-22088981.iso",
     "component_download_file_checksum": "sha256:0383e83e5fd24e7a0f2aa779a7fca8a753dca1de696f8335682f29d5ed084172",
     "component_download_file_size": "9.49 GB",
     "component_deploy_vcsa_spec": {

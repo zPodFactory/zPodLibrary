@@ -5,9 +5,9 @@
     "component_description": "VMware Cloud Foundation",
     "component_url": "https://www.vmware.com/products/cloud-foundation.html",
     "component_download_engine": "https",
-    "component_download_file": "https://dl.broadcom.com/BROADCOM_DOWNLOAD_TOKEN/PROD/COMP/SDDC_MANAGER_VCF/VCF-SDDC-Manager-Appliance-9.0.2.0.25151285.ova",
+    "component_download_file": "https://dl.broadcom.com/${BROADCOM_DOWNLOAD_TOKEN}/PROD/COMP/SDDC_MANAGER_VCF/VCF-SDDC-Manager-Appliance-9.0.2.0.25151285.ova",
     "component_download_file_checksum": "sha256:a87cf3da7eb37e6d6874cdd761b624baa0b0a6931167bc4988d38dcc882832a6",
-    "component_download_file_size": "2 GB",
+    "component_download_file_size": "2.03 GB",
     "component_deploy_govc_spec": {
         "DiskProvisioning": "thin",
         "IPAllocationPolicy": "dhcpPolicy",

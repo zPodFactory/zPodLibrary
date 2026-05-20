@@ -4,11 +4,11 @@
     "component_type": "vcsa",
     "component_description": "VMware vCenter Server",
     "component_url": "https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-vcenter-server-80u3d-release-notes/index.html",
-    "component_download_engine": "customerconnect",
+    "component_download_engine": "https",
     "component_download_product": "vmware_vsphere",
     "component_download_subproduct": "vc",
     "component_download_version": "8.0U3d",
-    "component_download_file": "VMware-VCSA-all-8.0.3-24322831.iso",
+    "component_download_file": "https://dl.broadcom.com/${BROADCOM_DOWNLOAD_TOKEN}/PROD/COMP/VCENTER/VMware-VCSA-all-8.0.3-24322831.iso",
     "component_download_file_checksum": "sha256:62be53bba1a068698ebaed76a5276e5ac9ffc19a4d41d54800f4b4a4e4170aa6",
     "component_download_file_size": "11.54 GB",
     "component_deploy_vcsa_spec": {
