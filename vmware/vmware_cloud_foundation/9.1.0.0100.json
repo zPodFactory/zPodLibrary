@@ -1,12 +1,12 @@
 {
     "component_name": "vcfinstaller",
-    "component_version": "9.1.0.0",
+    "component_version": "9.1.0.0100",
     "component_type": "vcfinstaller",
     "component_description": "VMware Cloud Foundation",
     "component_url": "https://www.vmware.com/products/cloud-foundation.html",
     "component_download_engine": "https",
-    "component_download_file": "https://dl.broadcom.com/${BROADCOM_DOWNLOAD_TOKEN}/PROD/COMP/SDDC_MANAGER_VCF/VCF-SDDC-Manager-Appliance-9.1.0.0.25371088.ova",
-    "component_download_file_checksum": "sha256:91963150c1b3653572e0834a3c226e51eaa84168ee3e7d862d0fdd05535d2ff4",
+    "component_download_file": "https://dl.broadcom.com/${BROADCOM_DOWNLOAD_TOKEN}/PROD/COMP/SDDC_MANAGER_VCF/VCF-SDDC-Manager-Appliance-9.1.0.0100.25428926.ova",
+    "component_download_file_checksum": "sha256:892da9feadaebe88b10056ddd36c3fb53e23fb3af8eced12c5d5d6bec54c9ac5",
     "component_download_file_size": "2.28 GB",
     "component_deploy_govc_spec": {
         "DiskProvisioning": "thin",
