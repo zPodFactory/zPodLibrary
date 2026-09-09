@@ -1,0 +1,87 @@
+{
+    "component_name": "esxi",
+    "component_version": "9.1.1.0",
+    "component_type": "esxi",
+    "component_description": "VMware ESXi Template",
+    "component_url": "https://vmwa.re/nestedesxi",
+    "component_download_engine": "https",
+    "component_download_file": "https://support.broadcom.com/thiswillnotwork/Nested_ESXi9.1.1.0_Appliance_Template_v1.0.ova",
+    "component_download_file_checksum": "sha256:e8c4506b702f69a7f5083835783f4d5af8964f566d9ebf9f828b127adc511c0f",
+    "component_download_file_size": "1.1 GB",
+    "component_deploy_govc_spec": {
+        "DiskProvisioning": "thin",
+        "IPAllocationPolicy": "dhcpPolicy",
+        "IPProtocol": "IPv4",
+        "PropertyMapping": [
+            {
+                "Key": "guestinfo.hostname",
+                "Value": "{{zpod_hostname}}"
+            },
+            {
+                "Key": "guestinfo.ipaddress",
+                "Value": "{{zpod_ipaddress}}"
+            },
+            {
+                "Key": "guestinfo.netmask",
+                "Value": "{{zpod_netmask}}"
+            },
+            {
+                "Key": "guestinfo.gateway",
+                "Value": "{{zpod_gateway}}"
+            },
+            {
+                "Key": "guestinfo.vlan",
+                "Value": ""
+            },
+            {
+                "Key": "guestinfo.dns",
+                "Value": "{{zpod_dns}}"
+            },
+            {
+                "Key": "guestinfo.domain",
+                "Value": "{{zpod_domain}}"
+            },
+            {
+                "Key": "guestinfo.ntp",
+                "Value": "{{zpod_ntp}}"
+            },
+            {
+                "Key": "guestinfo.syslog",
+                "Value": ""
+            },
+            {
+                "Key": "guestinfo.password",
+                "Value": "{{zpod_password}}"
+            },
+            {
+                "Key": "guestinfo.ssh_key",
+                "Value": "{{zpod_sshkey}}"
+            },
+            {
+                "Key": "guestinfo.ssh",
+                "Value": "True"
+            },
+            {
+                "Key": "guestinfo.createvmfs",
+                "Value": "False"
+            },
+            {
+                "Key": "guestinfo.followmac",
+                "Value": "False"
+            }
+        ],
+        "NetworkMapping": [
+            {
+                "Name": "VM Network",
+                "Network": "{{zpod_portgroup}}"
+            }
+        ],
+        "Annotation": "Nested ESXi 9.1.1 Appliance (Build 25714478)",
+        "MarkAsTemplate": false,
+        "PowerOn": false,
+        "InjectOvfEnv": true,
+        "WaitForIP": false,
+        "Name": null
+    },
+    "component_isnested": false
+}
