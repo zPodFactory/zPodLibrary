@@ -78,6 +78,12 @@
                 "Value": ""
             }
         ],
+        "NetworkMapping": [
+            {
+                "Name": "Network 1",
+                "Network": "{{zpod_portgroup}}"
+            }
+        ],
         "Annotation": "VMware Aria Operations Version 8.17.1 running on Photon OS",
         "MarkAsTemplate": false,
         "PowerOn": false,

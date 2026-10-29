@@ -32,7 +32,7 @@
           },
           {
             "Key": "guestinfo.vlan",
-            "Value": ""
+            "Value": "{{zpod_vlan}}"
           },
           {
             "Key": "guestinfo.dns",
