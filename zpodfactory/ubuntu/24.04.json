@@ -1,0 +1,92 @@
+{
+    "component_name": "ubuntu",
+    "component_version": "24.04",
+    "component_type": "linux",
+    "component_description": "Ubuntu 24.04 LTS cloud image (cloud-init, VMware datasource via extraConfig)",
+    "component_url": "https://cloud-images.ubuntu.com/noble/",
+    "component_download_engine": "https",
+    "component_download_file": "https://cloud-images.ubuntu.com/noble/20261017/noble-server-cloudimg-amd64.ova",
+    "component_download_file_checksum": "sha256:ce599f89777c6eaa1a3156698f004b7938dcc16680132d5f10da1269770e74a2",
+    "component_download_file_size": "563 MB",
+    "component_deploy_govc_spec": {
+        "DiskProvisioning": "thin",
+        "IPAllocationPolicy": "dhcpPolicy",
+        "IPProtocol": "IPv4",
+        "NetworkMapping": [
+            {
+                "Name": "VM Network",
+                "Network": "{{zpod_portgroup}}"
+            }
+        ],
+        "MarkAsTemplate": false,
+        "PowerOn": false,
+        "InjectOvfEnv": false,
+        "WaitForIP": false,
+        "Name": null
+    },
+    "component_deploy_extra_config": {
+        "guestinfo.metadata": {
+            "format": "yaml",
+            "content": {
+                "instance-id": "{{zpod_hostname}}.{{zpod_domain}}",
+                "local-hostname": "{{zpod_hostname}}",
+                "network": {
+                    "version": 2,
+                    "ethernets": {
+                        "nic0": {
+                            "addresses": [
+                                "{{zpod_ipaddress}}/{{zpod_netprefix}}"
+                            ],
+                            "match": {
+                                "name": "e*"
+                            },
+                            "routes": [
+                                {
+                                    "to": "0.0.0.0/0",
+                                    "via": "{{zpod_gateway}}"
+                                }
+                            ],
+                            "nameservers": {
+                                "addresses": [
+                                    "{{zpod_dns}}"
+                                ],
+                                "search": [
+                                    "{{zpod_domain}}"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "guestinfo.userdata": {
+            "format": "cloud-config",
+            "content": {
+                "fqdn": "{{zpod_hostname}}.{{zpod_domain}}",
+                "prefer_fqdn_over_hostname": false,
+                "disable_root": false,
+                "ssh_pwauth": true,
+                "chpasswd": {
+                    "expire": false,
+                    "users": [
+                        {
+                            "name": "root",
+                            "password": "{{zpod_password}}",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "ssh_authorized_keys": [
+                    "{{zpod_sshkey}}"
+                ],
+                "ntp": {
+                    "enabled": true,
+                    "servers": [
+                        "{{zpod_ntp}}"
+                    ]
+                }
+            }
+        }
+    },
+    "component_isnested": false
+}

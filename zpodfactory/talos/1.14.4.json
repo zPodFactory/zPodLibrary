@@ -1,0 +1,53 @@
+{
+    "component_name": "talos",
+    "component_version": "1.14.4",
+    "component_type": "talos",
+    "component_description": "Talos Linux (stock Image Factory OVA, static IP via guestinfo.metadata extraConfig)",
+    "component_url": "https://docs.siderolabs.com/talos/v1.14/platform-specific-installations/virtualized-platforms/vmware",
+    "component_download_engine": "https",
+    "component_download_file": "https://factory.talos.dev/image/903b2da78f99adef03cbbd4df6714563823f63218508800751560d3bc3557e40/v1.14.4/vmware-amd64.ova",
+    "component_download_file_checksum": "sha256:138247c25be3d39c6b0f35d39a1598f347b04d310d49706977775f13fc5fd7c9",
+    "component_download_file_size": "240 MB",
+    "component_deploy_govc_spec": {
+        "DiskProvisioning": "thin",
+        "IPAllocationPolicy": "dhcpPolicy",
+        "IPProtocol": "IPv4",
+        "NetworkMapping": [
+            {
+                "Name": "VM Network",
+                "Network": "{{zpod_portgroup}}"
+            }
+        ],
+        "MarkAsTemplate": false,
+        "PowerOn": false,
+        "InjectOvfEnv": false,
+        "WaitForIP": false,
+        "Name": null
+    },
+    "component_deploy_extra_config": {
+        "guestinfo.metadata": {
+            "format": "yaml",
+            "content": {
+                "instance-id": "{{zpod_hostname}}",
+                "local-hostname": "{{zpod_hostname}}.{{zpod_domain}}",
+                "network": {
+                    "version": 2,
+                    "ethernets": {
+                        "eth0": {
+                            "addresses": [
+                                "{{zpod_ipaddress}}/{{zpod_netprefix}}"
+                            ],
+                            "gateway4": "{{zpod_gateway}}",
+                            "nameservers": {
+                                "addresses": [
+                                    "{{zpod_dns}}"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "component_isnested": false
+}

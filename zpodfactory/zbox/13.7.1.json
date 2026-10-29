@@ -1,0 +1,66 @@
+{
+    "component_name": "zbox",
+    "component_version": "13.7.1",
+    "component_type": "zbox",
+    "component_description": "zBox Debian Linux Appliance",
+    "component_url": "https://github.com/zPodFactory/packer-zbox",
+    "component_download_engine": "https",
+    "component_download_file": "https://cloud.tsugliani.fr/ova/zbox-13.7.1.ova",
+    "component_download_file_checksum": "sha256:4d3808526df4523804f0bcc18a2f90951b117fd2962d6ec5044c0a5036d1ebb8",
+    "component_download_file_size": "1016 MB",
+    "component_deploy_govc_spec": {
+        "DiskProvisioning": "thin",
+        "IPAllocationPolicy": "dhcpPolicy",
+        "IPProtocol": "IPv4",
+        "PropertyMapping": [
+            {
+                "Key": "guestinfo.hostname",
+                "Value": "{{zpod_hostname}}"
+            },
+            {
+                "Key": "guestinfo.ipaddress",
+                "Value": "{{zpod_ipaddress}}"
+            },
+            {
+                "Key": "guestinfo.netprefix",
+                "Value": "{{zpod_netprefix}}"
+            },
+            {
+                "Key": "guestinfo.gateway",
+                "Value": "{{zpod_gateway}}"
+            },
+            {
+                "Key": "guestinfo.dns",
+                "Value": "{{zpod_dns}}"
+            },
+            {
+                "Key": "guestinfo.domain",
+                "Value": "{{zpod_domain}}"
+            },
+            {
+                "Key": "guestinfo.password",
+                "Value": "{{zpod_password}}"
+            },
+            {
+                "Key": "guestinfo.sshkey",
+                "Value": "{{zpod_sshkey}}"
+            },
+            {
+                "Key": "guestinfo.zboxtui",
+                "Value": "True"
+            }
+        ],
+        "NetworkMapping": [
+            {
+                "Name": "VM Network",
+                "Network": "{{zpod_portgroup}}"
+            }
+        ],
+        "MarkAsTemplate": false,
+        "PowerOn": false,
+        "InjectOvfEnv": true,
+        "WaitForIP": false,
+        "Name": null
+    },
+    "component_isnested": false
+}

@@ -1,0 +1,61 @@
+{
+    "component_name": "rhcos",
+    "component_version": "4.22.8",
+    "component_type": "linux",
+    "component_description": "Red Hat Enterprise Linux CoreOS 4.22 (Ignition + Afterburn static IP via extraConfig)",
+    "component_url": "https://mirror.openshift.com/pub/openshift-v4/x86_64/dependencies/rhcos/4.22/",
+    "component_download_engine": "https",
+    "component_download_file": "https://mirror.openshift.com/pub/openshift-v4/x86_64/dependencies/rhcos/4.22/latest/rhcos-4.22.8-x86_64-vmware.x86_64.ova",
+    "component_download_file_checksum": "sha256:a3ec50999113db0409dc75747e2a3f704224b436927ff0cb79f71db8fd16e43d",
+    "component_download_file_size": "1400 MB",
+    "component_deploy_govc_spec": {
+        "DiskProvisioning": "thin",
+        "IPAllocationPolicy": "dhcpPolicy",
+        "IPProtocol": "IPv4",
+        "NetworkMapping": [
+            {
+                "Name": "VM Network",
+                "Network": "{{zpod_portgroup}}"
+            }
+        ],
+        "MarkAsTemplate": false,
+        "PowerOn": false,
+        "InjectOvfEnv": false,
+        "WaitForIP": false,
+        "Name": null
+    },
+    "component_deploy_extra_config": {
+        "guestinfo.afterburn.initrd.network-kargs": "ip={{zpod_ipaddress}}::{{zpod_gateway}}:{{zpod_netmask}}:{{zpod_hostname}}.{{zpod_domain}}:ens192:none:{{zpod_dns}}",
+        "guestinfo.ignition.config.data": {
+            "format": "json",
+            "content": {
+                "ignition": {
+                    "version": "3.4.0"
+                },
+                "passwd": {
+                    "users": [
+                        {
+                            "name": "core",
+                            "sshAuthorizedKeys": [
+                                "{{zpod_sshkey}}"
+                            ]
+                        }
+                    ]
+                },
+                "storage": {
+                    "files": [
+                        {
+                            "path": "/etc/hostname",
+                            "mode": 420,
+                            "overwrite": true,
+                            "contents": {
+                                "source": "data:,{{zpod_hostname}}.{{zpod_domain}}"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "component_isnested": false
+}
